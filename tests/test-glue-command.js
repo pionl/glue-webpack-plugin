@@ -70,12 +70,28 @@ describe("glue-command", function () {
             output: "output",
             force: true,
             less: true,
-            project: false
+            project: false,
+            algorithm: "square"
         });
 
         assert.equal("glue", command.getCommand());
         assert.deepEqual(command.getArguments(), [
-            "input", "output", "--force", "--less"
+            "input", "output", "--force", "--less", "--algorithm=square"
+        ]);
+    });
+
+
+    it("getArguments - command with optional value", function () {
+        var command = new Command({
+            exec: "glue",
+            source: "input",
+            output: "output",
+            less: "test",
+        });
+
+        assert.equal("glue", command.getCommand());
+        assert.deepEqual(command.getArguments(), [
+            "input", "output", "--less=test"
         ]);
     });
 
