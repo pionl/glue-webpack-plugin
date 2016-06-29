@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": "https://github.com/pion/glue-webpack-plugin",
   "dependencies": {
-
+    "lodash": "^4.13.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
