@@ -65,16 +65,36 @@ describe("glue", function () {
 
     it("validate - compile", function() {
 
+        var called = false;
         var glue = new Glue({
             force: true
-        }, function(commands, callback) {
-            assert.deepEqual(commands, [
-                "glue", defaultOptions.source, defaultOptions.output, "--force"
+        }, function(cmd, args) {
+            called = true;
+
+            assert.equal(cmd, "glue");
+
+            assert.deepEqual(args, [
+                defaultOptions.source, defaultOptions.output, "--force"
             ]);
 
-            callback("", "test")
+            // create the child object
+            var child = function() {
+                this.stdout = {
+                    on: function(name, callback) {
+                        assert.equal(name, "data");
+                    }
+                };
+
+                this.on = function(name, callback) {
+
+                };
+            };
+
+            return new child();
         });
 
         glue.compile();
+
+        assert.ok(called);
     });
 });
