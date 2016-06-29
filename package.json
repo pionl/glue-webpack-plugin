@@ -1,8 +1,12 @@
 {
   "name": "glue-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The webpack plugin to compile a sprite using the glue",
-  "keywords": ["glue", "sprites", "webpack"],
+  "keywords": [
+    "glue",
+    "sprites",
+    "webpack"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --require intelli-espower-loader ./tests/*.js"
