@@ -1,6 +1,7 @@
 # Webpack plugin for creating sprites images with the Glue
 
 [![Build Status](https://travis-ci.org/pionl/glue-webpack-plugin.svg?branch=master)](https://travis-ci.org/pionl/glue-webpack-plugin)
+[![npm version](https://badge.fury.io/js/glue-webpack-plugin.svg)](https://badge.fury.io/js/glue-webpack-plugin)
 
 
 ## Requirements
