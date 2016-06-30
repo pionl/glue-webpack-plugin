@@ -48,6 +48,7 @@ plugins: [
 ```
     
 ### Options
+_The docs are taken from [gulp-sprite-glue](https://github.com/frontainer/gulp-sprite-glue) package. Credits go to frontainer_
 
 #### options.exec
 Type: `String`
@@ -291,3 +292,7 @@ npm test
 
 ## License
 MIT
+
+**The plugin is inspired by the great packages:**
+
+* [gulp-sprite-glue](https://github.com/frontainer/gulp-sprite-glue)
