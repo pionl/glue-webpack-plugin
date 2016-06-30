@@ -46,7 +46,7 @@ describe("glue-plugin", function () {
             this.plugin = function(name, callback) {
 
                 // the apply must call the mit function
-                assert.equal(name, "emit");
+                assert.equal(name, "compile");
 
                 // test that the callback was called
                 var called = false;

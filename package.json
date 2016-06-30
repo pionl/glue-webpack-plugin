@@ -16,7 +16,7 @@
   },
   "author": "Martin Kluska <martin.kluska@imakers.cz>",
   "license": "MIT",
-  "repository": "https://github.com/pion/glue-webpack-plugin",
+  "repository": "https://github.com/pionl/glue-webpack-plugin",
   "dependencies": {
     "lodash": "^4.13.1"
   },

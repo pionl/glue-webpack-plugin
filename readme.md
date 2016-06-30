@@ -33,6 +33,7 @@ plugins: [
     new GlueWebpackPlugin({
         source: "./src/sprites/",
         output: "./build/sprites",
+        quiet: true, // this will mute all the console output
         crop: true,
         ratios: "2,1",
         project: false,
