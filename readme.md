@@ -46,6 +46,9 @@ plugins: [
     })
 ]
 ```
+
+The icons are compiled only once. You can aditional trigger a watch for a glue process until the main process is finished 
+(the webpack or your node server)
     
 ### Options
 _The docs are taken from [gulp-sprite-glue](https://github.com/frontainer/gulp-sprite-glue) package. Credits go to frontainer_
@@ -73,6 +76,23 @@ Type: `Boolean`
 Default value: `false`
 
 Optimize our sprite by croping all the unnecessary transparent spaces that the original images could have.
+
+#### options.watch
+Type: `Boolean`
+Default value: `false`
+
+You can let the glue to watch for changes in your directory. Ideal when using your dev setup with reload.
+
+___Example:___
+
+    ..config,
+    watch: process.env.NODE_WATCH == "true"
+    
+And run your dev setup with a env. variable NODE_WATCH. Example:
+
+    NODE_WATCH=true node server.js
+    
+Tested with `react hot realoading` and `webpack --watch`
 
 #### options.caat
 Type: `Boolean`

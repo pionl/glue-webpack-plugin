@@ -24,7 +24,7 @@ GlueWebpackPlugin.prototype.apply = function(compiler) {
     var that = this;
 
     // wait for emit
-    compiler.plugin("compile", function(compilation, callback) {
+    compiler.plugin("compilation", function(compilation, callback) {
 
         that.glue.compile(function(code) {
             callback();
