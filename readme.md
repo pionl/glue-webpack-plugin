@@ -12,7 +12,7 @@
 ## Install
 
     npm install glue-webpack-plugin
-    
+
 ### Glue
 
 - The latest documentation is available at: http://glue.readthedocs.org
@@ -47,9 +47,9 @@ plugins: [
 ]
 ```
 
-The icons are compiled only once. You can aditional trigger a watch for a glue process until the main process is finished 
+The icons are compiled only once. You can aditional trigger a watch for a glue process until the main process is finished
 (the webpack or your node server)
-    
+
 ### Options
 _The docs are taken from [gulp-sprite-glue](https://github.com/frontainer/gulp-sprite-glue) package. Credits go to frontainer_
 
@@ -87,11 +87,11 @@ ___Example:___
 
     ..config,
     watch: process.env.NODE_WATCH == "true"
-    
+
 And run your dev setup with a env. variable NODE_WATCH. Example:
 
     NODE_WATCH=true node server.js
-    
+
 Tested with `react hot realoading` and `webpack --watch`
 
 #### options.caat
@@ -303,6 +303,12 @@ Type: `Boolean`
 Default value: `false`
 
 While you are developing a site it could be quite frustrating running Glue.
+
+#### options.progress
+Type: `Boolean`
+Default value: `false`
+
+Output the glue progress
 
 ## Test
 

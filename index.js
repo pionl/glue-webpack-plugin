@@ -23,11 +23,11 @@ function GlueWebpackPlugin(options) {
 GlueWebpackPlugin.prototype.apply = function(compiler) {
     var that = this;
 
-    // wait for emit
-    compiler.plugin("compilation", function(compilation, callback) {
+    // start on compile (emit or compilation is triggered multiple times)
+    compiler.plugin("compile", function(params) {
 
         that.glue.compile(function(code) {
-            callback();
+
         });
     });
 };
