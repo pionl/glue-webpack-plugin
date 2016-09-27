@@ -1,6 +1,6 @@
 {
   "name": "glue-webpack-plugin",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "The webpack plugin to compile a sprite using the glue",
   "keywords": [
     "glue",
