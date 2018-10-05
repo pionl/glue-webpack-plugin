@@ -80,6 +80,25 @@ describe("glue-command", function () {
         ]);
     });
 
+    it("getArguments - commands with empty string", function () {
+        var command = new Command({
+            exec: "glue",
+            source: "input",
+            output: "output",
+            force: true,
+            less: true,
+            project: false,
+            algorithm: "square",
+            namespace: ""
+        });
+
+        assert.equal("glue", command.getCommand());
+        assert.deepEqual(command.getArguments(), [
+            "input", "output", "--force", "--less", "--algorithm=square",
+            "--namespace="
+        ]);
+    });
+
 
     it("getArguments - command with optional value", function () {
         var command = new Command({

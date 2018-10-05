@@ -18,6 +18,7 @@
   "license": "MIT",
   "repository": "https://github.com/pionl/glue-webpack-plugin",
   "dependencies": {
+    "execa": "^1.0.0",
     "lodash": "^4.13.1"
   },
   "devDependencies": {

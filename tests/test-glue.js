@@ -32,7 +32,8 @@ describe("glue", function () {
             exec: defaultOptions.exec,
             source: inputOptions.source,
             output: defaultOptions.output,
-            force: inputOptions.force
+            force: inputOptions.force,
+            progress: defaultOptions.progress
         });
     });
 
@@ -49,7 +50,8 @@ describe("glue", function () {
         assert.deepEqual(glue.options, {
             exec: "test",
             source: defaultOptions.source,
-            output: defaultOptions.output
+            output: defaultOptions.output,
+            progress: defaultOptions.progress
         });
 
         assert.throws(glue.validate, "The validate should raise exception - not valid options");
@@ -77,20 +79,11 @@ describe("glue", function () {
                 defaultOptions.source, defaultOptions.output, "--force"
             ]);
 
-            // create the child object
-            var child = function() {
-                this.stdout = {
-                    on: function(name, callback) {
-                        assert.equal(name, "data");
-                    }
-                };
-
-                this.on = function(name, callback) {
-
-                };
-            };
-
-            return new child();
+            return new Promise((resolve, reject) => {
+                resolve({
+                    stdout: 'data'
+                })
+            })
         });
 
         glue.compile();
