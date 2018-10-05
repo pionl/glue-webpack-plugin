@@ -26,7 +26,7 @@ GlueWebpackPlugin.prototype.apply = function(compiler) {
     // start on compile (emit or compilation is triggered multiple times)
     compiler.plugin("emit", function(compilation, callback) {
         that.glue.compile().then(function (result) {
-            if (options.progress) {
+            if (that.glue.options.progress) {
                 process.stdout.write(result.stdout)
             }
             callback()
