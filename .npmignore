@@ -1,3 +1,4 @@
 .gitignore
 tests
 .travis.yml
+.idea
